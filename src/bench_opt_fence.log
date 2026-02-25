@@ -1,0 +1,83 @@
+Device: AMD Instinct MI300X, 304 CUs, 2100 MHz
+
+Fence Only: Chiplet Fence
+  Release only         ns/round:    223.341  cycles/round:    469.016
+  Acquire only         ns/round:    354.766  cycles/round:    745.008
+  Release+Acquire      ns/round:    377.775  cycles/round:    793.328
+Fence Only: Device Rel+Acq
+  Release only         ns/round:    302.995  cycles/round:    636.289
+  Acquire only         ns/round:    304.898  cycles/round:    640.285
+  Release+Acquire      ns/round:    426.209  cycles/round:    895.039
+Fence Only: Device Thread Fence
+  Release only         ns/round:    426.047  cycles/round:    894.699
+  Acquire only         ns/round:    424.109  cycles/round:    890.629
+  Release+Acquire      ns/round:    424.116  cycles/round:    890.645
+
+Producer-Consumer: Chiplet Fence
+  XCC 0: ns/round:    483.810  cycles/round:   1016.000  (median of 20)
+  XCC 1: ns/round:    472.381  cycles/round:    992.000  (median of 20)
+  XCC 2: ns/round:    380.952  cycles/round:    800.000  (median of 20)
+  XCC 3: ns/round:    346.667  cycles/round:    728.000  (median of 20)
+  XCC 4: ns/round:    274.286  cycles/round:    576.000  (median of 20)
+  XCC 5: ns/round:    293.333  cycles/round:    616.000  (median of 20)
+  XCC 6: ns/round:    280.000  cycles/round:    588.000  (median of 20)
+  XCC 7: ns/round:    274.286  cycles/round:    576.000  (median of 20)
+  Average over 8 chiplets: ns/round:    350.714  cycles/round:    736.500
+Producer-Consumer: Device Rel+Acq
+  XCC 0: ns/round:    516.190  cycles/round:   1084.000  (median of 20)
+  XCC 1: ns/round:    556.190  cycles/round:   1168.000  (median of 20)
+  XCC 2: ns/round:    331.429  cycles/round:    696.000  (median of 20)
+  XCC 3: ns/round:    352.381  cycles/round:    740.000  (median of 20)
+  XCC 4: ns/round:    318.095  cycles/round:    668.000  (median of 20)
+  XCC 5: ns/round:    293.333  cycles/round:    616.000  (median of 20)
+  XCC 6: ns/round:    283.810  cycles/round:    596.000  (median of 20)
+  XCC 7: ns/round:    312.381  cycles/round:    656.000  (median of 20)
+  Average over 8 chiplets: ns/round:    370.476  cycles/round:    778.000
+Producer-Consumer: Device Thread Fence
+  XCC 0: ns/round:    491.429  cycles/round:   1032.000  (median of 20)
+  XCC 1: ns/round:    493.333  cycles/round:   1036.000  (median of 20)
+  XCC 2: ns/round:    333.333  cycles/round:    700.000  (median of 20)
+  XCC 3: ns/round:    350.476  cycles/round:    736.000  (median of 20)
+  XCC 4: ns/round:    321.905  cycles/round:    676.000  (median of 20)
+  XCC 5: ns/round:    310.476  cycles/round:    652.000  (median of 20)
+  XCC 6: ns/round:    276.190  cycles/round:    580.000  (median of 20)
+  XCC 7: ns/round:    287.619  cycles/round:    604.000  (median of 20)
+  Average over 8 chiplets: ns/round:    358.095  cycles/round:    752.000
+
+Ping-Pong: Chiplet Fence
+  XCD 0: ns/round:   1243.177  cycles/round:   2610.672  mismatches: 0  (median of 20)
+  XCD 1: ns/round:   1247.667  cycles/round:   2620.102  mismatches: 0  (median of 20)
+  XCD 2: ns/round:   1370.722  cycles/round:   2878.516  mismatches: 0  (median of 20)
+  XCD 3: ns/round:   1381.648  cycles/round:   2901.461  mismatches: 0  (median of 20)
+  XCD 4: ns/round:   1184.851  cycles/round:   2488.188  mismatches: 0  (median of 20)
+  XCD 5: ns/round:   1181.038  cycles/round:   2480.180  mismatches: 0  (median of 20)
+  XCD 6: ns/round:   1032.173  cycles/round:   2167.562  mismatches: 0  (median of 20)
+  XCD 7: ns/round:   1030.677  cycles/round:   2164.422  mismatches: 0  (median of 20)
+  Average over 8 chiplets: ns/round:   1208.994  cycles/round:   2538.888
+Ping-Pong: Device Rel+Acq
+  XCD 0: ns/round:   1149.542  cycles/round:   2414.039  mismatches: 0  (median of 20)
+  XCD 1: ns/round:   1153.266  cycles/round:   2421.859  mismatches: 0  (median of 20)
+  XCD 2: ns/round:   1307.288  cycles/round:   2745.305  mismatches: 0  (median of 20)
+  XCD 3: ns/round:   1320.885  cycles/round:   2773.859  mismatches: 0  (median of 20)
+  XCD 4: ns/round:   1101.068  cycles/round:   2312.242  mismatches: 0  (median of 20)
+  XCD 5: ns/round:   1100.108  cycles/round:   2310.227  mismatches: 0  (median of 20)
+  XCD 6: ns/round:    947.697  cycles/round:   1990.164  mismatches: 0  (median of 20)
+  XCD 7: ns/round:    945.785  cycles/round:   1986.148  mismatches: 0  (median of 20)
+  Average over 8 chiplets: ns/round:   1128.205  cycles/round:   2369.230
+Ping-Pong: Device Thread Fence
+  XCD 0: ns/round:   1151.722  cycles/round:   2418.617  mismatches: 0  (median of 20)
+  XCD 1: ns/round:   1157.132  cycles/round:   2429.977  mismatches: 0  (median of 20)
+  XCD 2: ns/round:   1307.184  cycles/round:   2745.086  mismatches: 0  (median of 20)
+  XCD 3: ns/round:   1311.339  cycles/round:   2753.812  mismatches: 0  (median of 20)
+  XCD 4: ns/round:   1101.432  cycles/round:   2313.008  mismatches: 0  (median of 20)
+  XCD 5: ns/round:   1105.249  cycles/round:   2321.023  mismatches: 0  (median of 20)
+  XCD 6: ns/round:    949.081  cycles/round:   1993.070  mismatches: 0  (median of 20)
+  XCD 7: ns/round:    944.907  cycles/round:   1984.305  mismatches: 0  (median of 20)
+  Average over 8 chiplets: ns/round:   1128.506  cycles/round:   2369.862
+
+Fence Storm: Chiplet Fence
+  Fence Storm: ns/round:    331.421  cycles/round:    695.984  (median of 20)
+Fence Storm: Device Rel+Acq
+  Fence Storm: ns/round:    402.035  cycles/round:    844.273  (median of 20)
+Fence Storm: Device Thread Fence
+  Fence Storm: ns/round:    403.940  cycles/round:    848.273  (median of 20)
